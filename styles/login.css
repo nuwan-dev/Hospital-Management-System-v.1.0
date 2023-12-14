@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Open Sans";
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Light.ttf");
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
+  src: url("/assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+:root {
+  --green: #00bf63;
+  --light-green: #33f195;
+  --white: #ffffff;
+  --font-sub: "Open Sans", sans-serif;
+  --font-main: "Ubuntu", sans-serif;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  & .login-child-1 {
+    background-image: url("/assets/images/medical-banner-with-doctor-wearing-coat-min.jpg") !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 60%;
+  }
+
+  & .login-child-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    padding: 40px;
+
+    & .login-child-2-topbar {
+      & .login-back-btn {
+        background: none;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        border: none;
+        cursor: pointer;
+
+        & img {
+          width: 14px;
+          margin-top: 3px;
+        }
+
+        & span {
+          font-weight: 600;
+          color: var(--green);
+          font-size: 18px;
+          line-height: 0;
+        }
+      }
+    }
+
+    & .login-child-2-content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      flex-direction: column;
+
+      & .login-child-2-content-logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        & img {
+          width: 100px;
+          margin: auto;
+          border-radius: 15px;
+        }
+      }
+
+      & .login-layout {
+        & p {
+          margin-bottom: 50px;
+          color: #000;
+          font-family: var(--font-sub);
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        & .native-login {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          & input {
+            width: 70%;
+            margin: auto;
+            outline: none;
+            padding: 10px;
+            box-shadow: inset 0 0 0 1px #bac8d3;
+            border: none;
+            border-radius: 3px;
+          }
+
+          & input:nth-child(2) {
+            margin-top: 15px;
+          }
+
+          & .login-btn {
+            background-color: var(--green);
+            border: none;
+            border-radius: 3px;
+            margin: auto;
+            width: 70%;
+            padding: 10px;
+            margin-top: 15px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+          }
+
+          & p {
+            color: #374957;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 2rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & .register-btn {
+              border: none;
+              background: none;
+              margin-left: 10px;
+              color: var(--green);
+              font-weight: 600;
+              font-size: 16px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .login-child-1 {
+      width: 100%;
+    }
+
+    & .login-child-2 {
+      width: 100%;
+    }
+  }
+}
